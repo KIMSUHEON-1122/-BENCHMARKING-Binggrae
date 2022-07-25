@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/title.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
@@ -20,7 +22,7 @@
 </head>
 <body>
     <!-- 상단영역 -->
-    <header>
+    <header id="top">
         <!-- div.inner>(h1>a)+(ul>li*5>a)+ul>li*2 -->
         <div class="inner">
             <h1><a href="http://www.bing.co.kr/">빙그레</a></h1>
@@ -126,15 +128,15 @@
         <section id="community">
             <div class="inner innerPadding flex flexCenter flexWrap">
                 <h2 class="hide"></h2>
-                <article class="cyber flex flexColumn flexBetween">
+                <article class="cyber flex flexColumn flexBetween padding50">
                     <h3 class="h3">사이버신고</h3>
                     <p class="p">빙그레 임직원의 부당한 요구 또는<span class="br"></span> 업무 처리, 기타 부정행위 제보</p>
-                    <a href="#">제보하기</a>
+                    <a href="#" class="submit">제보하기</a>
                 </article>
-                <article class="sinmungo flex flexColumn flexBetween">
+                <article class="sinmungo flex flexColumn flexBetween padding50">
                     <h3 class="h3">안전신문고</h3>
                     <p class="p">빙그레 종사자의 유해·위험요소 및<span class="br"></span> 안전·보건에 관한 의견 제보</p>
-                    <a href="#">제보하기</a>
+                    <a href="#" class="submit">제보하기</a>
                 </article>
                 <div class="flex flexBetween flexWrap">
                     <article class="faq">
@@ -152,13 +154,13 @@
                         a : 관련 페이지로 머뭄 -->
                         <!-- 문맥상 더보기가 밑으로 들어감(구조적 접근) -->
                     </article>
-                    <article class="email">
+                    <article class="email padding50 flex flexBetween flexColumn">
                         <h3 class="h3">이메일 상담</h3>
                         <p class="p">빙그레에 궁금한 사항을 문의해 주세요.<br />
                             최대한 빠른 시일내에 친절하게 답변해드리겠습니다. </p>
-                        <a href="#">상담하기</a>
+                        <a href="#" class="submit">상담하기</a>
                     </article>
-                    <article class="telphone">
+                    <article class="telphone padding50">
                         <h3 class="h3">전화 상담</h3>
                         <a href="tel:080-022-0056">080.022.0056</a>
                         <!-- 모바일에서 바로 전화 걸 수 있는 태그 -->
@@ -168,11 +170,40 @@
             </div>
         </section>
 <!-- 커뮤니티 -->
+        <aside id="quick">
+            <span class="flex flexColumn flexCenter">
+                <a href="https://brand.naver.com/binggrae" class="shop" target="_blank">SHOP</a>
+                <a href="#top" class="top">맨위로 가기</a>
+                <!-- top이라는 id가 있는 곳으로 감 -->
+            </span>
+        </aside>
     </main>
     <!-- 하단영역 -->
     <footer>
-
+        <div class="inner padding50 flex flexBetween">
+            <div class="left flex flexColumn flexBetween">
+                <h1><a href="">빙그레</a></h1>
+                <address class="p">회사명 : 빙그레<br />
+                    경기도 남양주시 다산동 4344-3 / 경기도 남양주시 다산순환로 45(다산동)</address>
+                <p class="copyrighy p">ⓒ Binggrae all rights reserved.</p>
+            </div>
+            <div class="right flex flexColumn flexBetween">
+                <ul class="personal flex">
+                    <li><a href="">개인정보처리방침</a></li>
+                    <li><a href="">오시는길</a></li>
+                </ul>
+                <div class="bottom flex">
+                    <ul class="sns flex">
+                        <li><a href="">인스타그램</a></li>
+                        <li><a href="">유튜브</a></li>
+                        <li><a href="">tft mall</a></li>
+                    </ul>
+                    <a href="">Flagship store Soft Lab</a>
+                </div>
+            </div>
+        </div>
     </footer>
+
 </body>
 </html>
 <!-- 구조적인 의미로 맞게 작성해야 함. 
