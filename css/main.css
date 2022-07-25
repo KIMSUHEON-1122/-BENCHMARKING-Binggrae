@@ -1,0 +1,408 @@
+#taste {
+}
+#taste .inner {
+  /*! display: flex; */
+  /*! flex-direction: column; */
+  /*! align-items: center; */
+  /*! padding-top: 20px; */ 
+}
+#taste .inner h2.h2 {
+  margin-bottom: 50px;
+}
+#taste .inner ul.list {
+  /*! display:flex; */
+  
+  width: 90%;
+  /*! justify-content: space-between; */
+  column-gap: 20px;
+  text-align: center;
+}
+#taste .inner ul.list li {
+  /*! border: 1px solid #eee; */
+  width: calc(100%/6);
+  /*부모요소에서 6등분*/
+}
+#taste .inner ul.list li:hover{
+  transform: translateY(-10px);
+  transition: all 0.5s;
+}
+#taste .inner ul.list li:nth-child(1):before{
+    background-image: url(../img/1.png);
+    background-color: #efe4db;
+}
+#taste .inner ul.list li:nth-child(2):before{
+    background-image: url(../img/2.png);
+
+    background-color: #f6efe0;
+}
+#taste .inner ul.list li:nth-child(3):before{
+    background-image: url(../img/3.png);
+    background-color: #f9e5e5;
+}
+#taste .inner ul.list li:nth-child(4):before{
+    background-image: url(../img/4.png);
+    background-color: #ededed;
+}
+#taste .inner ul.list li:nth-child(5):before{
+    background-image: url(../img/5.png);
+    background-color: #e4f3f9;
+}
+#taste .inner ul.list li:nth-child(6):before{
+    background-image: url(../img/6.png);
+    background-color: #fcf4e5;
+}
+#taste .inner ul.list li::before{
+  content:"";
+  display: block;
+ width: 100%;
+  background-color: #efe4db;
+  height: 262px;
+  border-radius: 6px;
+  margin-bottom: 11px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#taste .inner ul.list li a::before{
+  content: "VIEW MORE";
+  display: block;
+  background-color: red;
+  color: white;
+  position: absolute;
+  width: 100%;
+  display: none;
+}
+#taste .inner ul.list li:hover a::before{
+  display: block;
+}
+#taste .inner ul.list li a {
+  width: 100%;
+  display: block;
+  position: relative;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  overflow: hidden;
+  line-height: 2;
+}
+/* 브랜드샵 */
+#shop {
+}
+#shop .inner {
+  /*! display: flex; */
+  /*! flex-direction: column; */
+  /*! align-items: center; */
+  /*! padding-top: 20px; */
+}
+#shop .inner h2 {
+  margin-bottom: 50px;
+}
+#shop .inner ul.list::after{
+  content: "";
+  display: inline-block;
+  background-image: url(../img/right.png);
+  width:10px;
+  height: 20px;
+  background-repeat: no-repeat;
+  margin-top: 125px;
+}
+#shop .inner ul.list::before{
+  content: "";
+  display: inline-block;
+  background-image: url(../img/left.png);
+  width:10px;
+  height:20px;
+  background-repeat: no-repeat; 
+  margin-top: 125px;
+}
+#shop .inner ul.list {
+  
+  /*! display: flex; */
+  width: 90%;
+  /*! justify-content: space-around; */
+  gap: 10px;
+}
+#shop .inner ul.list li {
+  border-radius: 40px;
+  border: 1px solid #e1dbdb;
+  width: calc(100%/6);
+  gap: 10px;
+  /*! box-sizing: border-box; */
+  height: 261px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction:column;
+}
+#shop .inner ul.list li:hover{
+  box-shadow: 1px 1px 5px gray;
+}
+#shop .inner ul.list li:hover > *{
+  display: block;
+}
+#shop .inner ul.list li>*:not(h3){
+  display: none;
+/* h3을 제외한 모든 것들   */
+}
+#shop .inner ul.list li h3 {
+  font-size: 0px;
+}
+#shop .inner ul.list li h3 img {
+display: block;
+/*! width: 150px; */
+/*! height: 150px; */
+background-color: white;
+transition: all 0.5s;
+}
+#shop .inner ul.list li h3 img br {
+}
+#shop .inner ul.list li:hover p::before{
+  display: block;
+}
+#shop .inner ul.list li p::before{
+  content: "";
+  display: none;
+  box-sizing: border-box;
+  border-top: 1px solid #ccc;
+  width: 10%;
+  margin:0 auto;
+  margin-bottom:16px;
+  text-align: center;
+}
+#shop .inner ul.list li p {
+  /*! margin-top: 30px; */
+ line-break: 5;
+}
+#shop .inner ul.list li a {
+  color: white;
+  background-color: red;
+  /*! box-sizing: border-box; */
+  /*! border: 1px solid white; */
+  width: 90%;
+  border-radius: 16px;
+  line-height: 2;
+  text-align: center;
+}
+
+#shop .inner ul.list li:hover>*:not(a){
+  animation-name: fadeup;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+/*   animation-direction: reverse; */
+}
+#shop .inner ul.list li:hover img{
+  transform: scale(0.7);
+}
+#shop .inner ul.list li:hover a{
+  animation-name: shopFadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes shopFadeIn{
+  from{
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0); 
+  }
+}
+@keyframes fadeup{
+  from{
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to{
+     transform: translateY(0px); 
+    opacity: 1;
+  }
+}
+#community {
+  
+}
+#community .inner {
+  
+  gap: 50px;
+}
+#community .inner h2 {
+  
+}
+#community .inner > *{
+  border-radius: 30px;
+/* 공통된 부분이므로 위에 작성해줌 */
+  padding: 50px;
+  box-sizing: border-box;
+  /*! gap: 50px; */
+}
+#community .inner > article {
+  /*! padding: 50px 50px; */
+  width: 40%;
+  height: 280px;
+  display: flex;
+}
+#community .inner > article.cyber {
+  
+  background-color: #fcf5e5;
+  background-image: url(../img/commu1.png);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-origin: content-box;
+/*   배경 이미지를 어느 영역부터 채워나갈지를 정하는 속성 */
+}
+#community .inner > article.sinmungo {
+  
+  background-color: #f9f9f9;
+}
+#community .inner > article h3 {
+  
+}
+#community .inner > article p {
+  
+}
+#community .inner > article > a {
+  
+  background-color: red;
+  box-sizing: border-box;
+  width: 160px;
+  height: 43px;
+  color: white;
+  text-align: center;
+  line-height: 2.5;
+  border-radius: 21.5px;
+}
+#community .inner div {
+  
+  width: calc(80% + 50px);
+  border: 1px solid;
+  gap: 50px;
+}
+#community .inner div article {
+  
+  /*! display: flex; */
+  /*! flex-direction: column; */
+  border-radius: 30px;
+  position: relative;
+  justify-content: space-around;
+  box-sizing: border-box;
+  /*! padding: 20px 20px; */
+}
+#community .inner div article:not(.faq){
+  width: calc((100% / 2) - (50px / 2));
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px;
+}
+#community .inner div article.telphone{
+  background-color: #fdf3f2;
+}
+#community .inner div article.faq {
+  width: 100%;
+  position: relative;
+}
+#community .inner div article.faq::after{
+  content: "";
+  display: block;
+}
+#community .inner div article.email {
+  
+  background-color: #eef8fb;
+  /*! display: flex; */
+  /*! flex-direction: column; */
+}
+#community .inner div article.email a{
+  width: 160px;
+  height: 43px;
+  background-color: red;
+  box-sizing: border-box;
+  border-radius: 80px;
+  
+  color: white;
+  text-align: center;
+  line-height: 2.5;
+}
+#community .inner div article.telephone {
+  
+}
+#community .inner div article h3 {
+  
+  /*! width: 100%; */
+  /*! height: 50px; */
+  margin-bottom: 30px;
+}
+#community .inner div article ul {
+  row-gap: 10px;
+}
+#community .inner div article ul li {
+  width: calc(100%/2 - 50px / 2 - 40px);
+  background-color: #f9f9f9;
+  /*! border: 1px solid; */
+  /*! box-sizing: border-box; */
+  height: 80px;
+  border-radius: 40px;
+  line-height: 5;
+  /*! padding-left: 20px; */
+  /*! padding-right: 20px; */
+  box-shadow: 0 0 15px #eee7e7 inset;
+  /*! display: flex; */
+  justify-content: space-between;
+}
+#community .inner div article ul li:nth-child(even){
+/*   margin-left: 50px; */
+}
+#community .inner div article ul li:hover{
+  font-weight: bold;
+}
+#community .inner div article ul li a {
+  
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+#community .inner div article ul li a::after{
+  content:"↗";
+  width: 26px;
+  height: 26px;
+  display:inline-block;
+  background-color: red;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 26px;
+  color: white;
+  transition: all 0.7s;
+  transform: scale(0)
+}
+
+#community .inner div article ul li:hover a::after{
+ transform: scale(1);
+}
+
+#community .inner div article p {
+  
+}
+#community .inner div article > a.viewMore:hover{
+  background-color: red;
+  color: white;
+}
+#community .inner div article > a.viewMore{
+/*  
+  
+  /*! position: absolute; */
+  /*! display: block; */
+  width: 130px;
+  height: 30px;
+  /*! box-sizing: border-box; */
+  /*! border-block-color: black; */ /*! *\/ */
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  border: 1px solid #eee;
+  border-radius: 15px;
+  text-align: center;
+  line-height: 2;
+
+}
+/* vertical-align : inline요소를 수직으로 .
+한 줄 이지만 글자마다 위치를 다르게 해주고 싶을떄 */
