@@ -85,6 +85,17 @@
 }
 /* 브랜드샵 */
 #shop {
+  position: relative;
+}
+#shop::before{
+  
+  content: "BRAND";
+  font-size: 100px;
+  transform-origin: 0 75%;
+  position: absolute;
+  transform: translateX(16px) rotate(90deg);
+  opacity: 0.1;
+  /*! transform: rotate(90deg) translateX(17px); */
 }
 #shop .inner {
   /*! display: flex; */
